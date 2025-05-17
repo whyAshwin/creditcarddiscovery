@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-sans text-neutral-800 bg-neutral-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight text-neutral-900;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-3 rounded-lg font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-neutral-100 hover:bg-neutral-200 text-neutral-800 focus:ring-neutral-500;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent-500 hover:bg-accent-600 text-white focus:ring-accent-400;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg;
+  }
+
+  .question-card {
+    @apply bg-white rounded-xl shadow-md p-6 w-full max-w-xl mx-auto transition-all duration-300 hover:shadow-lg;
+  }
+
+  .option-card {
+    @apply p-4 border border-neutral-200 rounded-lg cursor-pointer transition-all duration-200 hover:border-primary-400 hover:bg-primary-50;
+  }
+
+  .option-card.selected {
+    @apply border-primary-500 bg-primary-50;
+  }
+
+  .credit-card-tile {
+    @apply card p-5 border border-neutral-200 transition-all duration-200 hover:border-primary-300;
+  }
+}
